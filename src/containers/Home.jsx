@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
-import Todos from '../components/Todos'
 
 function Home() {
+  const [todos, setTodos] = useState(['buy milk', 'buy eggs'])
   const [todo, setTodo] = useState('')
+  const appendTodo = (e) => {
+    e.preventDefault()
+    // alert('kena ' + todo)
+    setTodos([...todos, todo])
+    setTodo('')
+
+  }
   return (
     <div>
-      ini home beb
-      <Todos />
-      <p>{todo}</p>
-      <form>
+       <h1>Todos</h1>
+      <ul>
+        { todos.map((todo, i) => (
+          <li key={'todo-' + i}>{todo}</li>
+        ))}
+      </ul>
+      {/* <p>{todo}</p> */}
+      <form onSubmit={appendTodo}>
         <input type="text" value={todo} onChange={e => setTodo(e.target.value)}/>
         <input type="submit" value="Save" />
       </form>
