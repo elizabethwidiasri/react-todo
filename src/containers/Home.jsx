@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useSelector, useDispatch} from 'react-redux'
 import { setTodos, setTodo } from '../store/action'
 import Form from '../components/Form'
@@ -21,6 +22,7 @@ function Home() {
 
   return (
     <div>
+      <Link to="/detail">Detail</Link>
        <h1>Todos</h1>
       <ul>
         { todos.map(todo => (

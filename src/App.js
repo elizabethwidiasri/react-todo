@@ -17,7 +17,7 @@ function App() {
       <Router>
         <div className="App">
 
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -27,7 +27,7 @@ function App() {
             </li>
             <li></li>
           </ul>
-        </nav>
+        </nav> */}
 
           <Switch>
             <Route path="/detail">
