@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 import { setTodos, setTodo } from '../store/action'
 import Form from '../components/Form'
